@@ -11,7 +11,7 @@
     while($donnees=mysqli_fetch_assoc($sql)) {
     ?>
      
-    <option value="<?php echo $donnees ['id'];?>"><?php echo $donnees ['nom_prof'];?></option>
+    <option value="<?php echo $donnees ['idprofesseur'];?>"><?php echo $donnees ['nom_prof'];?></option>
      
     <?php
     }
