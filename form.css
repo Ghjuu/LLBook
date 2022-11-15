@@ -2,6 +2,13 @@ body {
     color:black;
     background-color:white;
     background-position:center center;
-    background-size: 1600px;
+    background-size: cover;
     background-image:url(https://img.freepik.com/photos-premium/fond-lieu-travail-ordinateur-bureau-moderne-ecran-blanc-blanc-vintage-bois-noir_35355-1098.jpg);
+    }
+
+	@media only screen and (max-width: 1800px) { 
+        .html { 
+    height: 200px;
+    width: 150px; 
+        }
     }

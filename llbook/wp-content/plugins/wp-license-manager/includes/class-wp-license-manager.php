@@ -150,7 +150,8 @@ class Wp_License_Manager {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
-		
+		//custom type product
+		$this->loader->add_action( 'init', $plugin_public, 'add_products_post_type' );
 
         // Meta boxes
         $this->loader->add_action( 'add_meta_boxes_wplm_product', $plugin_admin, 'add_product_information_meta_box' );
