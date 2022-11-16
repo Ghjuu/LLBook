@@ -17,29 +17,21 @@ try {
 }
  
 //REQUETE SQL A EXECUTER
-$sql="SELECT nom_prof FROM professeur";
- 
+$test="SELECT nomGroupe, nomClasse FROM groupe, classe GROUP BY nomGroupe";
+
 //PREPARATION ET EXECUTION DE LA REQUETE
-$stmt = $pdo->prepare($sql);
+$stmt = $pdo->prepare($test);
 $stmt->execute();
 ?>
 <!-- Liste deroulante MYSQL des Quartier -->
 <form method="post" action="liste.php">
-    <select name="liste_quartier">
+    <select name="liste_nom">
         <?php
         //SCRIPT DE RETOUR DES ENREGISTREMENTS EN BDD
         while ($result = $stmt->fetch()) {
-            echo '<option value="'.$result["quartier"].'">'.$result["quartier"].'</option>';
+            echo '<option value="'.$result["nomGroupe"].'">'.$result["nomGroupe"].'</option>';
+            echo '<option value="'.$result["nomClasse"].'">'.$result["nomClasse"].'</option>';
         }
         ?>
     </select>
-    <input type="submit" value="Valider" />
 </form>
-<?php
-//Démarage du code PHP si l'utilisateur à validé le bouton submit:
-        if(isset($_POST['valider']))
-		{
-        echo 'Vous avez selectionné la ligne '.'liste_quartier';
-        }
- 
-   ?>
