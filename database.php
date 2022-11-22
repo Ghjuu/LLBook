@@ -11,7 +11,7 @@ $txtPhone = $_POST['txtPhone'];
 $txtMessage = $_POST['txtMessage'];
 
 // database insert SQL code
-$sql = "INSERT INTO `test` (`id`, `nom`, `mail`, `phone`, `message`) VALUES ('0', '$txtName', '$txtEmail', '$txtPhone', '$txtMessage')";
+$sql = "INSERT INTO `demande` (`id`, `dateDemande`, `mail`, `nomClasse`, `nbLicence_Prof`, nbLicence_Prof) VALUES ('0', '$txtName', '$txtEmail', '$txtPhone', '$txtMessage')";
 
 // insert in database 
 $rs = mysqli_query($con, $sql);

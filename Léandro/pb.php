@@ -17,20 +17,19 @@ try {
 }
  
 //REQUETE SQL A EXECUTER
-$test="SELECT nomGroupe, nomClasse FROM groupe, classe GROUP BY nomGroupe";
-
+$sql="SELECT nom_prof FROM professeur";
+ 
 //PREPARATION ET EXECUTION DE LA REQUETE
-$stmt = $pdo->prepare($test);
+$stmt = $pdo->prepare($sql);
 $stmt->execute();
 ?>
-<!-- Liste deroulante MYSQL -->
+<!-- Liste deroulante MYSQL des Quartier -->
 <form method="post" action="liste.php">
     <select name="liste_nom">
         <?php
         //SCRIPT DE RETOUR DES ENREGISTREMENTS EN BDD
         while ($result = $stmt->fetch()) {
-            echo '<option value="'.$result["nomGroupe"].'">'.$result["nomGroupe"].'</option>';
-            echo '<option value="'.$result["nomClasse"].'">'.$result["nomClasse"].'</option>';
+            echo '<option value="'.$result["nom_prof"].'">'.$result["nom_prof"].'</option>';
         }
         ?>
     </select>

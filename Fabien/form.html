@@ -1,0 +1,77 @@
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <div>
+<CENTER><head>
+    <link rel="stylesheet" href="form.css">
+    <meta charset="utf-8">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <FONT size="25pt" color="orange" face="arial black">
+    <u>LLBook</u></FONT>
+    <br>
+    <h2><FONT face="arial black"><u>Formulaire affectation des ressources numeriques</u></FONT></h2>
+</head>
+<br>
+<body>
+    <label for="nom-prof"><FONT size="3pt" color="black" face="Arial Black">Selectionner le nom de l'enseignant :</FONT></label>
+
+<select name="prof" id="nom-prof">
+    <option value="">Choisir le nom</option>
+    <option value="Pierre">Pierre</option>
+    <option value="Adam">Adam</option>
+    <option value="Jean">Jean</option>
+    <option value="Paul">Paul</option>
+    <option value="Hugo">Hugo</option>
+    <option value="Jacques">Jacques</option>
+</select>
+<br>
+<br>
+<label for="nom-classe"><FONT size="3pt" color="black" face="Arial Black">Selectionner la classe ou le groupe :</FONT></label>
+
+<select name="classe" id="nom-classe">
+    <option value="">Choisir la classe ou le groupe</option>
+    <option value="2GT1">2GT1</option>
+    <option value="2BSN">2BSN</option>
+    <option value="1GT1">1GT1</option>
+    <option value="1BSN">1BSN</option>
+    <option value="Groupe A">Groupe A</option>
+    <option value="Groupe B">Groupe B</option>
+</select>
+<br>
+<br>
+
+<br>
+<div>
+    <title>Donner la licence eleve a l'enseignant ?</title>
+</head>
+</div><FONT size="3pt" color="black" face="Arial Black">Donner la licence eleve a l'enseignant ?</FONT> <br>
+<body>
+<input type="checkbox" class="case" onClick="doAction()"> Oui
+<br>
+<input type="checkbox" class="case" onClick="doAction()"> Non
+<br>
+<script>
+function doAction() {
+var max = 1;
+var z = 0;
+var checkboxes = document.getElementsByClassName("case");
+for (var i = 0; i < checkboxes.length; i++) {
+if (checkboxes.item(i).checked == true) {
+z++
+if (z > max) {
+checkboxes.item(i).checked = false;
+}
+}
+}
+}
+</script>
+</body>
+<br>
+<button type="submit">Valider</button>
+</body>
+</CENTER>
+</div>
+</html>
