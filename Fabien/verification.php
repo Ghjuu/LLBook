@@ -15,7 +15,7 @@ $dbname = "llbook";
  $utilisateur_login = mysqli_real_escape_string($db,htmlspecialchars($_POST['utilisateur_login'])); 
  $utilisateur_mdp = mysqli_real_escape_string($db,htmlspecialchars($_POST['utilisateur_mdp']));
  
- if($login !== "" && $utilisateur_mdp !== "")
+ if($utilisateur_login !== "" && $utilisateur_mdp !== "")
  {
  $requete = "SELECT count(*) FROM utilisateurs where 
  utilisateur_login = '".$utilisateur_login."' and utilisateur_mdp = '".$utilisateur_mdp."' ";

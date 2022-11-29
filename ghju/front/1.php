@@ -1,9 +1,7 @@
 <?php
+
 // database connection code
 // $con = mysqli_connect('localhost', 'database_user', 'database_password','database');
-
-
-<?php
 
 $host="mysql";
 $user="phpmyadmin";
@@ -44,4 +42,3 @@ if($rs)
 	echo "Contact Records Inserted";
 }
 
-?>

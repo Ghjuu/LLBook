@@ -1,5 +1,5 @@
 body{
-    background: #67BE4B;
+    background: #ff9100;
    }
    #container{
     width:400px;
@@ -32,7 +32,7 @@ body{
    
    /* Set a style for all buttons */
    input[type=submit] {
-    background-color: #53af57;
+    background-color: #ff9100;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -42,6 +42,6 @@ body{
    }
    input[type=submit]:hover {
     background-color: white;
-    color: #53af57;
-    border: 1px solid #53af57;
+    color: #ff9100;
+    border: 1px solid #ff9100;
    }
